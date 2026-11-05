@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B.Sc. in ICT (International Program) at Mahidol University</title>
+<meta name="description" content="Campaign landing page for prospective students from China: the B.Sc. in Information and Communication Technology (International Program) at Mahidol University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Bai+Jamjuree:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#006C6C;
+  --green-deep:#005757;
+  --cream:#FFFFC9;
+  --navy:#1A2032;
+  --muted:#4B5366;
+  --line:#D9DDE3;
+  --paper:#FFFFFF;
+  --wash:#F5F6F7;
+  --radius:12px;
+  --shadow:0 1px 2px rgba(26,32,50,.06),0 4px 14px rgba(26,32,50,.05);
+  --font-head:"Bai Jamjuree","Anuphan",system-ui,sans-serif;
+  --font-body:"Anuphan","Bai Jamjuree",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--navy);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.18;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+img,svg{max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;z-index:20}
+.skip:focus{left:8px}
+[data-lucide]{width:22px;height:22px;stroke-width:1.75}
+
+/* concept notice */
+.notice{background:var(--cream);color:var(--navy);font-size:14px;line-height:1.45;border-bottom:1px solid #E6E6A0}
+.notice .wrap{padding-top:9px;padding-bottom:9px;display:flex;gap:10px;align-items:flex-start}
+.notice [data-lucide]{width:18px;height:18px;flex:none;margin-top:2px}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.15}
+.brand b{font-family:var(--font-head);font-size:20px;font-weight:700;color:var(--green)}
+.brand span{font-size:13px;color:var(--muted)}
+nav.main{display:flex;align-items:center;gap:26px}
+nav.main a.link{text-decoration:none;font-size:15px;font-weight:500;color:var(--navy)}
+nav.main a.link:hover{color:var(--green);text-decoration:underline;text-underline-offset:5px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:600;font-size:16px;line-height:1;text-decoration:none;padding:15px 22px;border-radius:10px;border:1.5px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn [data-lucide]{width:19px;height:19px}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-deep)}
+.btn-cream{background:var(--cream);color:var(--navy)}
+.btn-cream:hover{background:#fff}
+.btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.65)}
+.btn-line:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-line-dark{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-line-dark:hover{background:var(--navy);color:#fff}
+.btn-sm{padding:11px 16px;font-size:15px}
+
+/* hero */
+.hero{background:var(--green);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:80px}
+.hero .kicker{font-size:15px;color:var(--cream);margin-bottom:18px;font-weight:500}
+.hero h1{font-size:clamp(38px,5.4vw,60px);font-weight:700}
+.hero .lede{font-size:19px;margin-top:22px;max-width:34em;color:#EAF4F4}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero .proof{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.28);display:flex;gap:14px;align-items:flex-start;max-width:34em;font-size:16px;color:#EAF4F4}
+.hero .proof [data-lucide]{color:var(--cream);flex:none;margin-top:3px}
+.hero .proof small{display:block;font-size:13px;color:#CFE6E6;margin-top:4px}
+
+.map{background:var(--cream);color:var(--navy);border-radius:16px;padding:22px 22px 18px;box-shadow:0 1px 2px rgba(0,0,0,.12),0 10px 30px rgba(0,0,0,.14)}
+.map svg{display:block;width:100%;height:auto;font-family:var(--font-body)}
+.map figcaption{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.5}
+
+/* sections */
+section{padding:84px 0}
+section.wash{background:var(--wash)}
+.sec-head{max-width:46em;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,3.6vw,38px)}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:18px}
+
+/* facts */
+.facts{padding:0;background:var(--paper)}
+.facts .wrap{padding-top:0;padding-bottom:0}
+.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow);transform:translateY(-36px)}
+.fact{padding:26px 24px}
+.fact + .fact{border-left:1px solid var(--line)}
+.fact b{display:block;font-family:var(--font-head);font-size:30px;line-height:1.1;font-weight:700;color:var(--green)}
+.fact span{display:block;margin-top:8px;font-size:15px;color:var(--muted);line-height:1.5}
+.after-facts{padding-top:44px}
+
+/* cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+.card .ico{width:44px;height:44px;border-radius:10px;background:var(--cream);color:var(--green);display:grid;place-items:center;border:1px solid #E6E6A0}
+.card h3{font-size:21px}
+.card p{font-size:16px;color:var(--muted);line-height:1.6}
+.card .src{margin-top:auto;font-size:13px;color:var(--muted);padding-top:6px}
+.card .src a{color:var(--green)}
+
+/* tracks and careers */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}
+.panel h3{font-size:22px;margin-bottom:6px}
+.panel > p{color:var(--muted);font-size:16px;margin-bottom:18px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{border:1px solid var(--line);background:var(--wash);border-radius:8px;padding:8px 13px;font-size:15px;font-weight:500}
+.panel.green{background:var(--green);border-color:var(--green);color:#fff}
+.panel.green > p{color:#EAF4F4}
+.panel.green .chips li{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35);color:#fff}
+.note{font-size:14px;color:var(--muted);margin-top:16px;line-height:1.55}
+.panel.green .note{color:#CFE6E6}
+.callout{margin-top:22px;display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-left:4px solid var(--green);background:var(--paper);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.callout [data-lucide]{color:var(--green);flex:none;margin-top:2px}
+.callout p{font-size:16px}
+.callout small{display:block;margin-top:6px;color:var(--muted);font-size:13px}
+
+/* admission */
+.steps{list-style:none;margin:0 0 30px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--font-head);font-weight:700;margin-bottom:16px}
+.steps h3{font-size:20px;margin-bottom:8px}
+.steps p{font-size:16px;color:var(--muted)}
+dl.info{margin:0;display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow);overflow:hidden}
+dl.info div{padding:20px 24px;border-bottom:1px solid var(--line)}
+dl.info div:nth-child(odd){border-right:1px solid var(--line)}
+dl.info div:nth-last-child(-n+2){border-bottom:0}
+dl.info dt{font-size:14px;color:var(--muted);margin-bottom:4px}
+dl.info dd{margin:0;font-weight:500;font-size:17px}
+
+/* final cta */
+.final{background:var(--cream);padding:84px 0}
+.final .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.final h2{font-size:clamp(28px,3.8vw,40px)}
+.final p{margin-top:16px;font-size:18px;color:var(--navy);max-width:32em}
+.final .stack{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.final .stack .btn{width:100%;justify-content:center}
+.final .small{font-size:14px;margin-top:6px;color:var(--muted)}
+
+/* footer */
+footer{background:var(--navy);color:#DDE1EA;padding:56px 0 40px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1.3fr;gap:40px}
+footer h3{font-size:17px;color:#fff;margin-bottom:12px}
+footer a{color:#fff;text-underline-offset:3px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer .legal{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.2);font-size:14px;color:#B9C0CF;line-height:1.6}
+footer address{font-style:normal;line-height:1.7}
+
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:52px;padding-bottom:60px}
+  .grid-3{grid-template-columns:1fr 1fr}
+  .fact-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .two,.steps,.final .wrap{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  nav.main a.link{display:none}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .grid-3{grid-template-columns:1fr}
+  .fact-grid{transform:translateY(-28px)}
+  .fact{padding:20px 16px}
+  .fact b{font-size:25px}
+  dl.info{grid-template-columns:1fr}
+  dl.info div:nth-child(odd){border-right:0}
+  dl.info div:nth-last-child(2){border-bottom:1px solid var(--line)}
+  .hero .cta-row .btn{width:100%;justify-content:center}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice" role="note">
+  <div class="wrap">
+    <i data-lucide="info"></i>
+    <p>Student campaign concept for ITLG311 Business Communication. This is not an official ICT Mahidol website. Details come from official ICT Mahidol and Mahidol University pages, so confirm them on the faculty website before you apply.</p>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="B.Sc. ICT International Program, top of page">
+      <b>ICT Mahidol</b>
+      <span>B.Sc. International Program</span>
+    </a>
+    <nav class="main" aria-label="Page sections">
+      <a class="link" href="#gains">What you gain</a>
+      <a class="link" href="#tracks">Tracks and careers</a>
+      <a class="link" href="#apply">How to apply</a>
+      <a class="btn btn-green btn-sm" href="#start">Start your application</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="kicker">B.Sc. in Information and Communication Technology, International Program</p>
+      <h1>Explore ICT first. Choose your track in Year 3.</h1>
+      <p class="lede">A four-year degree taught in English at Mahidol University in Salaya, near Bangkok. Spend two years on ICT foundations, then pick one of eight tracks with advice from instructors and senior students.</p>
+      <div class="cta-row">
+        <a class="btn btn-cream" href="#start"><i data-lucide="list-checks"></i>Check admission requirements</a>
+        <a class="btn btn-line" href="#apply"><i data-lucide="route"></i>See the three steps</a>
+      </div>
+      <div class="proof">
+        <i data-lucide="users"></i>
+        <p>Chinese students already study full time in this programme.
+          <small>Mahidol International Programs listing for the 2023–24 intake. Ask the faculty for the latest figure.</small></p>
+      </div>
+    </div>
+
+    <figure class="map" style="margin:0">
+      <svg viewBox="0 0 420 420" role="img" aria-labelledby="map-t map-d">
+        <title id="map-t">How the programme is structured</title>
+        <desc id="map-d">Years 1 and 2 are ICT foundations. In Year 3 you choose one of eight tracks: Computer Science, Database and Intelligent Systems, Computer Networks, Software Engineering, Electronic Business Systems, Multimedia Systems, Management Information Systems, and Health Information Technology.</desc>
+        <text x="176" y="16" font-size="13" font-weight="600" fill="#4B5366">Year 3: choose one track</text>
+        <g fill="none" stroke="#006C6C" stroke-width="1.6" stroke-opacity=".55">
+          <path d="M116 216 C146 216 146 48 176 48"/>
+          <path d="M116 216 C146 216 146 96 176 96"/>
+          <path d="M116 216 C146 216 146 144 176 144"/>
+          <path d="M116 216 C146 216 146 192 176 192"/>
+          <path d="M116 216 C146 216 146 240 176 240"/>
+          <path d="M116 216 C146 216 146 288 176 288"/>
+          <path d="M116 216 C146 216 146 336 176 336"/>
+          <path d="M116 216 C146 216 146 384 176 384"/>
+        </g>
+        <rect x="0" y="152" width="116" height="128" rx="12" fill="#006C6C"/>
+        <text x="58" y="206" font-size="17" font-weight="700" fill="#FFFFC9" text-anchor="middle" style="font-family:'Bai Jamjuree',sans-serif">Years 1–2</text>
+        <text x="58" y="230" font-size="13" fill="#FFFFFF" text-anchor="middle">ICT foundations</text>
+        <g fill="#FFFFFF" stroke="#D9DDE3" stroke-width="1.2">
+          <rect x="176" y="30" width="244" height="36" rx="8"/>
+          <rect x="176" y="78" width="244" height="36" rx="8"/>
+          <rect x="176" y="126" width="244" height="36" rx="8"/>
+          <rect x="176" y="174" width="244" height="36" rx="8"/>
+          <rect x="176" y="222" width="244" height="36" rx="8"/>
+          <rect x="176" y="270" width="244" height="36" rx="8"/>
+          <rect x="176" y="318" width="244" height="36" rx="8"/>
+          <rect x="176" y="366" width="244" height="36" rx="8"/>
+        </g>
+        <g font-size="13.5" fill="#1A2032" font-weight="500">
+          <text x="190" y="53">Computer Science</text>
+          <text x="190" y="101">Database and Intelligent Systems</text>
+          <text x="190" y="149">Computer Networks</text>
+          <text x="190" y="197">Software Engineering</text>
+          <text x="190" y="245">Electronic Business Systems</text>
+          <text x="190" y="293">Multimedia Systems</text>
+          <text x="190" y="341">Management Information Systems</text>
+          <text x="190" y="389">Health Information Technology</text>
+        </g>
+      </svg>
+      <figcaption>The eight tracks named in the faculty's track-selection sessions for 2022 to 2024. The faculty updates its curriculum, so check the current list on its website.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- FACTS -->
+<div class="facts">
+  <div class="wrap">
+    <div class="fact-grid" role="list">
+      <div class="fact" role="listitem"><b>4 years</b><span>Two semesters a year: August to December and January to May</span></div>
+      <div class="fact" role="listitem"><b>In English</b><span>The programme is taught entirely in English</span></div>
+      <div class="fact" role="listitem"><b>8 tracks</b><span>You choose one in Year 3, after two years of foundations</span></div>
+      <div class="fact" role="listitem"><b>180,000 THB</b><span>Tuition per year for international students (90,000 THB per semester)</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section id="gains" class="after-facts">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What you gain from the B.Sc. in ICT</h2>
+      <p>Six reasons students choose this programme, each backed by an official source.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <div class="ico"><i data-lucide="languages"></i></div>
+        <h3>Study every course in English</h3>
+        <p>The programme is delivered entirely in English, so you practise listening, speaking, reading and writing in English throughout your degree.</p>
+        <p class="src">Source: <a href="https://www.bachelorsportal.com/studies/501047/information-and-communication-technology.html">Studyportals programme page</a></p>
+      </article>
+      <article class="card">
+        <div class="ico"><i data-lucide="git-branch"></i></div>
+        <h3>Decide your specialty with two years of experience</h3>
+        <p>Build core ICT knowledge first. Each year the faculty holds track-selection sessions where instructors and senior students explain the eight tracks.</p>
+        <p class="src">Source: <a href="https://news.ict.mahidol.ac.th/track-selection-2024/">ICT Mahidol news, 2024</a></p>
+      </article>
+      <article class="card">
+        <div class="ico"><i data-lucide="layers"></i></div>
+        <h3>Learn by building projects</h3>
+        <p>A graduate describes the learning system as project-based, with internships, competitions and a working space provided by the faculty.</p>
+        <p class="src">Source: <a href="https://www.ict.mahidol.ac.th/?p=10204">ICT Mahidol alumni testimonial</a></p>
+      </article>
+      <article class="card">
+        <div class="ico"><i data-lucide="plane"></i></div>
+        <h3>Intern abroad and meet employers</h3>
+        <p>The faculty offers internships abroad in countries such as Japan, Taiwan and Germany, plus IT competitions and an annual Job and Education Fair.</p>
+        <p class="src">Source: <a href="https://www.ict.mahidol.ac.th/admissions/why-ict-program-undergrad/">ICT Mahidol admissions page</a></p>
+      </article>
+      <article class="card">
+        <div class="ico"><i data-lucide="users"></i></div>
+        <h3>Start with classmates from China</h3>
+        <p>The 2023–24 Mahidol listing shows Chinese students enrolled full time in the programme, so you join a group that already shares your language and background.</p>
+        <p class="src">Source: <a href="https://op.mahidol.ac.th/ir/?p=27574">Mahidol International Programs listing</a></p>
+      </article>
+      <article class="card">
+        <div class="ico"><i data-lucide="award"></i></div>
+        <h3>Study at a ranked Thai university</h3>
+        <p>ShanghaiRanking's ARWU 2026 places Mahidol first among Thai universities, in the 501–600 band. QS World University Rankings 2027 lists it at =345.</p>
+        <p class="src">Sources: <a href="https://www.shanghairanking.com/universities/mahidol-university">ShanghaiRanking</a>, <a href="https://www.topuniversities.com/universities/mahidol-university">QS TopUniversities</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKS AND CAREERS -->
+<section id="tracks" class="wash">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Eight tracks in Year 3, and the careers they lead to</h2>
+      <p>The B.Sc. in ICT leans towards software and also teaches business and management.</p>
+    </div>
+    <div class="two">
+      <div class="panel green">
+        <h3>Tracks you can choose in Year 3</h3>
+        <p>One degree, eight ways to specialise.</p>
+        <ul class="chips">
+          <li>Computer Science</li>
+          <li>Database and Intelligent Systems</li>
+          <li>Computer Networks</li>
+          <li>Software Engineering</li>
+          <li>Electronic Business Systems</li>
+          <li>Multimedia Systems</li>
+          <li>Management Information Systems</li>
+          <li>Health Information Technology</li>
+        </ul>
+        <p class="note">Track names follow the faculty's 2022 to 2024 sessions. Later handbooks also mention Artificial Intelligence, so confirm the current list with the faculty.</p>
+      </div>
+      <div class="panel">
+        <h3>Jobs the faculty lists for graduates</h3>
+        <p>Roles named in the faculty's own admissions FAQ.</p>
+        <ul class="chips">
+          <li>Programmer or software developer</li>
+          <li>IT specialist</li>
+          <li>Systems analyst or designer</li>
+          <li>Web designer or developer</li>
+          <li>Database administrator</li>
+          <li>Network or system administrator</li>
+          <li>IT security analyst</li>
+          <li>IT or e-business manager</li>
+          <li>Quality assurance analyst</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <i data-lucide="code-xml"></i>
+      <div>
+        <p>The faculty explains that the B.Sc. in ICT focuses more on software, while Computer Engineering focuses more on hardware. If you want a software career alongside business and management knowledge, ICT is the programme built for it.</p>
+        <small>Source: <a href="https://ict.mahidol.ac.th/?p=8419">ICT Mahidol admissions FAQ</a></small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How to apply: three steps and what the programme costs</h2>
+      <p>Start with the requirements. In the 2023–24 international round, the exam was an online interview.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Read the requirements</h3>
+        <p>English proficiency and the accepted score options are listed on the faculty website.</p>
+      </li>
+      <li>
+        <h3>Apply online</h3>
+        <p>Submit the online application and pay the 600 THB application fee.</p>
+      </li>
+      <li>
+        <h3>Take the online interview</h3>
+        <p>The International Direct Admissions round for 2023–24 used an online interview as its exam format.</p>
+      </li>
+    </ol>
+    <dl class="info">
+      <div><dt>Tuition for international students</dt><dd>180,000 THB per year (90,000 THB per semester)</dd></div>
+      <div><dt>Application fee</dt><dd>600 THB</dd></div>
+      <div><dt>Length of study</dt><dd>4 years, two semesters a year</dd></div>
+      <div><dt>Semesters</dt><dd>August to December, then January to May</dd></div>
+      <div><dt>Housing</dt><dd>On-campus dormitories, first come, first served</dd></div>
+      <div><dt>Campus</dt><dd>Salaya, Nakhon Pathom. Thailand is one hour behind Beijing time.</dd></div>
+    </dl>
+    <p class="note">Fees, dates and interview format can change each admissions round. Confirm them for your intake on the official ICT Mahidol website.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final" id="start">
+  <div class="wrap">
+    <div>
+      <h2>Start with one small step: read the admission requirements</h2>
+      <p>It takes a few minutes and commits you to nothing. When you are ready, apply online or email the admissions team with your questions.</p>
+    </div>
+    <div class="stack">
+      <a class="btn btn-green" href="https://www.ict.mahidol.ac.th/"><i data-lucide="external-link"></i>Check admission requirements</a>
+      <a class="btn btn-line-dark" href="https://academic.ict.mahidol.ac.th/admission/apply/Default.aspx"><i data-lucide="file-pen-line"></i>Apply online</a>
+      <a class="btn btn-line-dark" href="mailto:ictadmission@mahidol.ac.th?subject=Question%20about%20the%20B.Sc.%20in%20ICT%20(International%20Program)"><i data-lucide="mail"></i>Email admissions</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Faculty of ICT, Mahidol University</h3>
+        <address>ICT Building, Mahidol University<br>999 Phuttamonthon 4 Road, Salaya<br>Nakhon Pathom 73170, Thailand<br><a href="mailto:ictadmission@mahidol.ac.th">ictadmission@mahidol.ac.th</a><br><a href="https://www.ict.mahidol.ac.th/">www.ict.mahidol.ac.th</a></address>
+      </div>
+      <div>
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#gains">What you gain</a></li>
+          <li><a href="#tracks">Tracks and careers</a></li>
+          <li><a href="#apply">How to apply</a></li>
+          <li><a href="#start">Start your application</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sources</h3>
+        <ul>
+          <li><a href="https://ict.mahidol.ac.th/en/wp-content/uploads/2024/09/INFO_Fact-Sheet-EN.pdf">ICT Mahidol Fact Sheet</a></li>
+          <li><a href="https://op.mahidol.ac.th/ir/?p=27574">Mahidol International Programs listing</a></li>
+          <li><a href="https://ict.mahidol.ac.th/?p=8419">ICT Mahidol admissions FAQ</a></li>
+          <li><a href="https://news.ict.mahidol.ac.th/track-selection-2024/">ICT Mahidol track-selection news</a></li>
+          <li><a href="https://www.shanghairanking.com/universities/mahidol-university">ShanghaiRanking, Mahidol</a></li>
+          <li><a href="https://www.topuniversities.com/universities/mahidol-university">QS TopUniversities, Mahidol</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">Student campaign concept created for ITLG311 Business Communication. It is not an official ICT Mahidol website and does not use the faculty's logo. Rankings and other figures come from the sources above and change over time.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script>
+  try { lucide.createIcons(); } catch (e) {}
+</script>
+</body>
+</html>
